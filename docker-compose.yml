@@ -27,11 +27,9 @@ services:
      volumes:
        - ./data/wordpress:/var/www/html/wp-content
   
-  portainer:
-    image: portainer/portainer
-    restart: always
-    networks:
-      - local
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./data/portainer:/data
+   portainer:
+     image: portainer/portainer
+     restart: always
+     volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+       - ./data/portainer:/data
